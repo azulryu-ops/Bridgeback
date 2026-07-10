@@ -5,9 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Bridgeback Pocket</title>
-  <link rel="icon" type="image/png" href="/assets/favicon.png" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
 
   <style>
+  .app-header {
+  width: 100%;
+  padding: 24px;
+  background: #2b2c31;
+  border-bottom: 2px solid #85a6ab;
+  box-sizing: border-box;
+}
+
+.brand-row {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.header-wordmark-full {
+  display: block;
+  width: 420px;
+  max-width: 90vw;
+  height: auto;
+  object-fit: contain;
+  border-radius: 14px;
+  margin: 0 auto;
+}
+
+.tagline {
+  margin: 0;
+  color: #d7d0bf;
+  text-align: center;
+}
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -15,72 +50,41 @@
       color: #f4f1e8;
       line-height: 1.5;
     }
+header {
+  padding: 18px 24px;
+  background: #2b2c31;
+  border-bottom: 2px solid #85a6ab;
+  display: flex;
+  justify-content: center;
+}
 
-    .app-header {
-      width: 100%;
-      padding: 24px;
-      background: #2b2c31;
-      border-bottom: 2px solid #85a6ab;
-      box-sizing: border-box;
-    }
+.brand-row {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+}
 
-    .brand-row {
-      width: 100%;
-      max-width: 900px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      text-align: center;
-    }
+.header-wordmark-full {
+  display: block;
+  width: 420px;
+  max-width: 90vw;
+  height: auto;
+  object-fit: contain;
+  border-radius: 14px;
+  margin: 0 auto;
+ 
+}
 
-    .header-wordmark-full {
-      display: block;
-      width: 420px;
-      max-width: 90vw;
-      height: auto;
-      object-fit: contain;
-      border-radius: 14px;
-      margin: 0 auto;
-    }
-
-    .tagline {
-      margin: 0;
-      color: #d7d0bf;
-      text-align: center;
-    }
-
-    .header-about {
-      width: 100%;
-      max-width: 720px;
-      margin-top: 18px;
-      padding: 18px;
-      background: #1f2025;
-      border: 1px solid #444650;
-      border-radius: 16px;
-      box-sizing: border-box;
-      text-align: left;
-    }
-
-    .header-about h2 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      color: #bfd3e0;
-      font-size: 1.2rem;
-    }
-
-    .header-about p {
-      margin: 10px 0;
-      color: #d7d0bf;
-    }
-
-    .header-about-line {
-      color: #bfd3e0 !important;
-      font-weight: bold;
-      text-align: center;
-    }
+.tagline {
+  margin: 0;
+  color: #d7d0bf;
+  text-align: center;
+}
 
     main {
       padding: 24px;
@@ -154,12 +158,12 @@
       border: 1px solid #555864;
     }
 
-    footer {
-      padding: 20px;
-      text-align: center;
-      color: #aaa;
-      font-size: 0.9rem;
-    }
+footer {
+  padding: 20px;
+  text-align: center;
+  color: #aaa;
+  font-size: 0.9rem;
+}
 
     .small-note {
       color: #c8c2b2;
@@ -173,6 +177,16 @@
 
     .home-title {
       margin-top: 0;
+    }
+
+    .hero-image {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 18px;
+      border: 1px solid #444650;
+      margin-bottom: 18px;
     }
 
     .tool-grid {
@@ -374,7 +388,35 @@
       font-weight: bold;
       margin-top: 16px;
     }
+.header-about {
+  width: 100%;
+  max-width: 720px;
+  margin-top: 18px;
+  padding: 18px;
+  background: #1f2025;
+  border: 1px solid #444650;
+  border-radius: 16px;
+  box-sizing: border-box;
+  text-align: left;
+}
 
+.header-about h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #bfd3e0;
+  font-size: 1.2rem;
+}
+
+.header-about p {
+  margin: 10px 0;
+  color: #d7d0bf;
+}
+
+.header-about-line {
+  color: #bfd3e0 !important;
+  font-weight: bold;
+  text-align: center;
+}
     .message-preview-note {
       color: #c8c2b2;
       font-size: 0.95rem;
@@ -391,8 +433,7 @@
       }
 
       .header-wordmark-full {
-        width: 340px;
-        max-width: 90vw;
+        max-width: 340px;
       }
 
       .tool-grid {
@@ -406,45 +447,48 @@
       .option-grid {
         grid-template-columns: 1fr;
       }
+
+      .hero-image {
+        max-height: 300px;
+      }
     }
   </style>
-</head>
+  <body>
+  </head>
+<header class="app-header">
+  <div class="brand-row">
+    <img
+      src="./assets/wordmark-blue.png"
+      alt="Bridgeback"
+      class="header-wordmark-full"
+    />
 
-<body>
-  <header class="app-header">
-    <div class="brand-row">
-      <img
-        src="/assets/wordmark-blue.png?v=12"
-        alt="Bridgeback"
-        class="header-wordmark-full"
-      />
+    <p class="tagline">
+      A user-owned support map for communication, access, and self-advocacy.
+    </p>
 
-      <p class="tagline">
-        A user-owned support map for communication, access, and self-advocacy.
+    <div class="header-about">
+      <h2>About Bridgeback</h2>
+
+      <p>
+        Bridgeback Pocket is a free cognitive accessibility and self-advocacy tool.
+        It helps users build a personal support profile, organize rough thoughts,
+        create message drafts, generate handoffs, and preserve their own
+        communication/access map.
       </p>
 
-      <div class="header-about">
-        <h2>About Bridgeback</h2>
+      <p>
+        Bridgeback is not therapy, medical care, crisis care, or a replacement for
+        human support. It exists to help users return to clarity, agency, and one
+        usable next step.
+      </p>
 
-        <p>
-          Bridgeback Pocket is a free cognitive accessibility and self-advocacy tool.
-          It helps users build a personal support profile, organize rough thoughts,
-          create message drafts, generate handoffs, and preserve their own
-          communication/access map.
-        </p>
-
-        <p>
-          Bridgeback is not therapy, medical care, crisis care, or a replacement for
-          human support. It exists to help users return to clarity, agency, and one
-          usable next step.
-        </p>
-
-        <p class="header-about-line">
-          The map belongs to the user. The bridge stays open.
-        </p>
-      </div>
+      <p class="header-about-line">
+        The map belongs to the user. The bridge stays open.
+      </p>
     </div>
-  </header>
+  </div>
+</header>
 
   <main>
     <section class="card">
@@ -699,6 +743,7 @@
 
         ${getProfileProgressHtml()}
       `;
+	  
     }
 
     function showProfile() {
@@ -710,8 +755,7 @@
 
         <p>
           Fill in whatever helps. You do not have to answer everything.
-          This profile is your map, and each section can open or close.
-          Scroll down if you do not see the field.
+          This profile is your map, and each section can open or close.Scroll down if you don't see the field
         </p>
 
         <p class="small-note">
